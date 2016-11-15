@@ -1,0 +1,88 @@
+/* image source: https://www.iconfinder.com/icons/134216/hamburger_lines_menu_icon */
+
+/* Hamburger button */
+.menubutton {
+    z-index: 999;
+    position: fixed;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    height: 35px;
+    width: 35px;
+    opacity: 1;
+    background-size: cover;
+    transition: opacity 0.2s, transform 0.4s;
+    transform-origin: 50% 50%;
+}
+
+.menubutton:hover {
+    opacity: 0.75;
+}
+
+.shifted {
+    transform: rotate(90deg) translate(0px,-180px);
+}
+
+/* Nav drawer */
+#drawer {
+    position: fixed;
+    height: 100%;
+    width: 180px;
+    opacity: 0;
+    background-color: #111;
+    transition: opacity 0.3s;
+    box-shadow: 5px 5px 20px black;
+}
+
+.opened {
+    z-index: 2 !important;
+    opacity: 0.95 !important;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    color: #333;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
+/* Actual nav buttons */
+nav * {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #DDD;
+    text-decoration: none;
+}
+
+.navtitle p {
+    text-align: center;
+    font-family: 'Didact Gothic';
+    font-size: 30px;
+}
+
+.nav-item {
+    border-bottom: 1px solid #222;
+    transition: background-color 0.25s, border-bottom 0.1s;
+}
+
+.nav-item:hover {
+    background-color: #222;
+    border-bottom: 2px solid #333;
+}
+
+/* Aesthetics */
+#page-content {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.faded {
+    opacity: 0.5 !important;
+}
+
+.invisible {
+    opacity: 0 !important;
+}

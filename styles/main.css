@@ -1,0 +1,156 @@
+/* Main stuff */
+@font-face {
+    font-family: "Poppy";
+    src: url(../Poppy.ttf) format("truetype");
+}
+
+* {
+    cursor: default;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: ;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+#page-content {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: white;
+}
+
+/* ::-webkit-scrollbar {
+	width: 13px; }
+::-webkit-scrollbar-thumb {
+	background-color: #FFF;
+	border-radius: 2px; 
+    border: 2px solid #222; }
+::-webkit-scrollbar-track {
+	background-color: #222; }
+::-webkit-scrollbar-button {
+	visibility: none; } */
+
+.parallax {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:  fixed;
+    background-size: cover;
+    font-size: 0;
+}
+
+/* Page title */
+.titlebox {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#maintitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Lobster', cursive;
+    font-size: 100px;
+    text-align: center;
+    line-height: 90px;
+    text-shadow: 5px 5px 50px black;
+}
+#mainsubtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* Section dividers */
+.divider {
+    z-index: 2;
+    display: inline-block;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    border-top: 0px solid white;
+    border-bottom: 0px solid white;
+    background-color: #222;
+    /*background-color: orange;*/
+    box-shadow: 1px 0px 10px black;
+}
+.divtext {
+    font-family: 'Quicksand';
+    font-size: 30px;
+    text-align: center;    
+}
+.poppysep {
+    font-family: 'Poppy' !important;
+}
+ 
+/* Sections */
+.section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+    /* Fallback */
+    //height: 500px;
+    /* Firefox */
+    //height: -moz-calc(100% - 100px);
+    /* Safari */
+    //height: -webkit-calc(100% - 100px);
+    /* Opera */
+    //height: -o-calc(100% - 100px);
+    /* Fallback */
+    height: calc(100vh - 100px);
+    
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chart {
+    margin: auto;
+    height: calc(100vh - 150px);
+    width: 90%;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    //border: 1px solid rgba(32,32,32,0.4);
+}
+
+#endlinks {
+    height: 100%;
+}
+
+/* Loading icon */
+/* #loader {
+    z-index: 999;
+    margin: auto;
+    height: 50px;
+    widows: 50px;
+    position: fixed;
+    background-color: red;
+} */

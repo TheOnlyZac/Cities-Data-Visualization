@@ -1,0 +1,31 @@
+body {
+    min-height: 130px !important;
+}
+
+.titlerow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: auto;
+    height: 25%;
+    transition: height 0.5s;
+}
+
+.titlerow:hover {
+    height: 30% !important;
+}
+
+.parallax {
+    background-attachment: local !important;
+    background-position: center;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}

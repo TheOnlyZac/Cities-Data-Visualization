@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <title>New York City</title>
+        <!-- Favicon https://www.iconfinder.com/icons/270252/liberty_monument_new_york_nyc_statue_of_liberty_usa_world_monuments_icon#size=128 -->
+        <link rel="icon" href="images/newyork/nycfavicon.png"/>
+        <!-- Stylesheets -->
+        <link type="text/css" rel="stylesheet" href="styles/main.css"/>
+        <link type="text/css" rel="stylesheet" href="styles/arrow.css"/>
+        <link type="text/css" rel="stylesheet" href="styles/menu.css"/>
+        <link type="text/css" rel="stylesheet" href="styles/sections.css"/>
+        <link type="text/css" rel="stylesheet" href="styles/home.css"/>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Dancing+Script|Raleway|Lobster|Quicksand|Didact+Gothic" rel="stylesheet">
+        <meta charset="utf-8">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Scripts -->
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/autoscroll.js"></script>
+        <script src="scripts/charts.js"></script>
+        <!-- Charts -->
+
+        <script type="text/javascript">
+            window.onload = function () {
+                /* Water chart */
+                var bgcolor = "rgba(32,32,32, 0.4)";
+                var textcolor = "#DDD";
+                var font = "Didact Gothic";
+                var chart = new CanvasJS.Chart("chart_water", {
+                    backgroundColor: bgcolor,
+                    title: {
+                        text: "NYC Water Consumption (1970-2009)",
+                        fontFamily: font,
+                        fontSize: 30,
+                        fontColor: textcolor
+                    },
+                    animationEnabled: true,
+                    axisX: {
+                        title: "year",
+                        titleFontFamily: font,
+                        titleFontColor: textcolor,
+                        titleFontSize: 20,
+                        gridColor: textcolor,
+                        tickColor: textcolor,
+                        valueFormatString: "YYYY",
+                        labelFontColor: textcolor
+                    },
+                    toolTip: {
+                        shared: true
+                    },
+                    theme: "theme1",
+                    axisY: {
+                        title: "million gallons/day",
+                        titleFontFamily: font,
+                        titleFontColor: textcolor,
+                        titleFontSize: 15,
+                        gridColor: textcolor,
+                        tickColor: textcolor,
+                        labelFontColor: textcolor,
+                        minimum: 900
+                    },
+                    legend: {
+                        verticalAlign: "center",
+                        horizontalAlign: "right"
+                    },
+                    data: [
+                    /* {
+                        type: "line",
+                        showInLegend: true,
+                        lineThickness: 2,
+                        name: "Population",
+                        markerType: "square",
+                        color: "#F08080",
+                        dataPoints: [
+                        { x: new Date(1970,1,1), y: 7,894,862 },
+                        { x: new Date(1980,1,1), y: 7071639 },
+                        { x: new Date(1990,1,1), y: 7322564 },
+                        { x: new Date(2000,1,1), y: 8008278 },
+                        { x: new Date(2010,1,1), y: 8175133 },
+                        ]
+                    }, */
+                    {
+                        type: "line",
+                        showInLegend: true,
+                        name: "water consumption",
+                        color: "#20B2AA",
+                        lineThickness: 2,
+
+                        dataPoints: [
+                        { x: new Date(1979,1,1), y: 1512.4 },
+                        { x: new Date(1980,1,1), y: 1505.9 },
+                        { x: new Date(1981,1,1), y: 1309.3 },
+                        { x: new Date(1982,1,1), y: 1382.4 },
+                        { x: new Date(1983,1,1), y: 1423.8 },
+                        { x: new Date(1984,1,1), y: 1465 },
+                        { x: new Date(1985,1,1), y: 1325.8 },
+                        { x: new Date(1986,1,1), y: 1350.7 },
+                        { x: new Date(1987,1,1), y: 1446.5 },
+                        { x: new Date(1988,1,1), y: 1483.9 },
+                        { x: new Date(1989,1,1), y: 1401.7 },
+                        { x: new Date(1990,1,1), y: 1423.8 },
+                        { x: new Date(1991,1,1), y: 1423.8 },
+                        { x: new Date(1992,1,1), y: 1423.8 },
+                        { x: new Date(1993,1,1), y: 1368.5 },
+                        { x: new Date(1994,1,1), y: 1357.7 },
+                        { x: new Date(1995,1,1), y: 1325.7 },
+                        { x: new Date(1996,1,1), y: 1297.9 },
+                        { x: new Date(1997,1,1), y: 1205.5 },
+                        { x: new Date(1998,1,1), y: 1219.5 },
+                        { x: new Date(1999,1,1), y: 1237.2 },
+                        { x: new Date(2000,1,1), y: 1240.4 },
+                        { x: new Date(2001,1,1), y: 1184 },
+                        { x: new Date(2002,1,1), y: 1135.6 },
+                        { x: new Date(2003,1,1), y: 1093.7 },
+                        { x: new Date(2004,1,1), y: 1099.5 },
+                        { x: new Date(2005,1,1), y: 1107.4 },
+                        { x: new Date(2006,1,1), y: 1068.7 },
+                        { x: new Date(2007,1,1), y: 1113.9 },
+                        { x: new Date(2008,1,1), y: 1082.9 },
+                        { x: new Date(2009,1,1), y: 1007.2 }
+                        ]
+                    }
+                    ],
+                    legend: {
+                        fontFamily: font,
+                        fontColor: textcolor,
+                        /* cursor: "pointer",
+                        itemclick: function (e) {
+                            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                e.dataSeries.visible = false;
+                            }
+                            else {
+                                e.dataSeries.visible = true;
+                            }
+                            chart.render();
+                        } */
+                    }
+                });
+                chart.render();
+                
+                /* Crime chart */
+                var chart = new CanvasJS.Chart("chart_crime", {
+                    backgroundColor: bgcolor,
+                    title: {
+                        text: "Number of crimes in NYC in 2001 vs 2015",
+                        fontFamily: font,
+                        fontSize: 30,
+                        fontColor: textcolor
+                    },
+                    axisY: {
+                        title: "number of crimes",
+                        titleFontFamily: font,
+                        titleFontColor: textcolor,
+                        titleFontSize: 20,
+                        labelFontColor: textcolor
+                        /* stripLines: [{
+                            value: 143650,
+                            label: "Boston crimes in 2015",
+                            showOnTop: true
+                        }] */
+                    },
+                    axisX: {
+                        title: "year",
+                        titleFontFamily: font,
+                        titleFontColor: textcolor,
+                        titleFontSize: 25,
+                        labelFontColor: textcolor
+                    },
+                    data: [{
+                        type: "bar",
+                        dataPoints: [
+                            { x: new Date(2001,1,1), y: 162064, label: "2001" },
+                            { x: new Date(2015,1,1), y: 78444, label: "2015" }
+                        ]
+                    }]
+                });
+
+                chart.render();
+                
+                /* Demographics chart */
+                var chart = new CanvasJS.Chart("chart_demographics", {
+                    backgroundColor: bgcolor,
+                    theme: "theme2",
+                    title:{
+                        text: "Population Demographics of NYC",
+                        fontFamily: font,
+                        fontSize: 30,
+                        fontColor: textcolor
+                    },
+                    data: [{
+                        indexLabelFontFamily: font,
+                        indexLabelFontColor: textcolor,
+                        indexLabelFontColor: textcolor,
+                        type: "pie",
+                        showInLegend: true,
+                        toolTipContent: "{y} - #percent %",
+                        yValueFormatString: "#0.#,,. Million",
+                        legendText: "{indexLabel}",
+                        dataPoints: [
+                            {  y: 3646761, indexLabel: "White" },
+                            {  y: 2067708, indexLabel: "Black" },
+                            {  y: 2407983, indexLabel: "Hispanic" },
+                            {  y: 1106989, indexLabel: "Asian"},
+                            {  y: (36549 + 1231976), indexLabel: "Other" },
+                            {  y: 264996, indexLabel: "Two or more"}
+                        ]}
+                    ],
+                    legend: {
+                        fontFamily: font,
+                        fontColor: textcolor,
+                    }
+                });
+                chart.render();
+                
+            }
+        </script>
+        <script src="scripts/canvasjs-1.9.2/canvasjs.min.js"></script>
+
+    </head>
+    <body>
+        <!-- <div id='loader'></div> -->
+        <nav id='drawer'></nav>
+        <img src='images/menubuttonwhite.svg' class='menubutton'/>
+        
+        <div class='invisible' id='page-content'>
+            <div class="arrow bounce" id='down'></div>
+            <div class='item'>
+                <div class='parallax' id="nyctitlebox">
+                    <div class='titlebox'>
+                        <p id='maintitle'>New York</p>
+                        <p id='mainsubtitle'><i>The city that never sleeps.</i></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <!--
+                NY crime data: http://www.nyc.gov/html/nypd/downloads/pdf/crime_statistics/cs-en-us-city.pdf
+                Criminal icon:
+                https://www.shareicon.net/security-people-user-imprisoned-arrest-jail-prisoner-criminal-detention-jailhouse-810247
+                --->
+                <div class='divider'>
+                    <p class='divtext'><span class='poppysep'>t</span>    CRIME    <span class='poppysep'>u</span></p>
+                </div>
+                
+                <div class='parallax section' id='crime'>
+                    <div class='chart' id='chart_crime'></div>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <!--
+                Water data: https://data.cityofnewyork.us/Environment/Water-Consumption-In-The-New-York-City/ia2d-e54m
+                Population data: ???
+                --->
+                <div class='divider'>
+                    <p class='divtext'><span class='poppysep'>t</span>    WATER CONSUMPTION    <span class='poppysep'>u</span></p>
+                </div>
+                
+                <div class='parallax section' id='water'>
+                    <div class='chart' id='chart_water'></div>
+                </div>
+            </div>
+            
+            <div class='item'>
+                <!--
+                Demographics data: http://www.usa.com/new-york-ny-population-and-races.htm
+                --->
+                <div class='divider'>
+                    <p class='divtext'><span class='poppysep'>t</span>    DEMOGRAPHICS    <span class='poppysep'>u</span></p>
+                </div>
+            
+                <div class='parallax section' id='liberty'>
+                    <div class='chart' id='chart_demographics'></div>
+                </div>
+            </div>
+            
+            <div class='item' id='endlinks'>
+                <!--
+                <div class='divider'>
+                    <p class='divtext'><span class='poppysep'>t</span>    SOURCES    <span class='poppysep'>u</span></p>
+                </div>
+                --->
+            
+                <div id='sources'>
+                    
+                <a class='homelink' href='newyork.html'>
+                    <div class='parallax' id='nyctitlebox'>
+                        <div class='titlerow' id='nyc'>
+                            <p id='maintitle'>New York</p>
+                            <p id='mainsubtitle'><i>The city that never sleeps.</i></p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class='homelink' href='london.html'>
+                    <div class='parallax' id='londontitlebox'>
+                        <div class='titlerow' id='london'>
+                            <p id='maintitle'>London</p>
+                            <p id='mainsubtitle'><i>The old smoke.</i></p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class='homelink' href='paris.html'>
+                    <div class='parallax' id='paristitlebox'>
+                        <div class='titlerow' id='paris'>
+                            <p id='maintitle'>Paris</p>
+                            <p id='mainsubtitle'><i>The city of lights.</i></p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class='homelink' href='sydney.html'>
+                    <div class='parallax' id='sydneytitlebox'>
+                        <div class='titlerow' id='sydney'>
+                            <p id='maintitle'>Sydney</p>
+                            <p id='mainsubtitle'><i>The emerald city.</i></p>
+                        </div>
+                    </div>
+                </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

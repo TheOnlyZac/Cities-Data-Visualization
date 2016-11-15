@@ -1,0 +1,82 @@
+/* New York City */
+#nyctitlebox {
+    /* https://www.pinterest.com/pin/310607705526572331/ */
+    background-image: url(../images/newyork/nyc.jpg);
+}
+
+#crime {
+    /* http://nationalreport.net/tennessee-city-adopts-sharia-law-crime-drops-52/ */
+    background-image: url(../images/newyork/crime.jpg);
+}
+
+#babynames {
+    /* http://santiamhospital.org/ser-birth-nursery.php */
+    background-image: url(../images/newyork/nursery.jpg);
+}
+
+#mountains {
+    background-image: url(../images/newyork/mountains.jpeg);
+}
+
+#liberty {
+    /* http://wallpapersafari.com/statue-of-liberty-wallpaper/ */
+    background-image: url(../images/newyork/liberty.jpg);
+}
+
+#water {
+    /* https://wall.alphacoders.com/big.php?i=342620 */
+    background-image: url(../images/newyork/water.jpg);
+}
+
+/* London */
+#londontitlebox {
+    /* http://www.londonphotofestival.org/ */
+    background-image: url(../images/london/london.jpg);
+}
+
+#londoneyebox {
+    /* http://www.uhdwallpapers.org/2015/04/london-eye.html */
+    background-image: url(../images/london/londoneye.jpg);
+}
+
+#bussesbox {
+    /* http://www.kingston.ac.uk/international/why-choose-kingston-university/location/london/ */
+    background-image: url(../images/london/busses.jpg);
+}
+
+/* extra images
+http://www.stgiles.com/hotels/united-kingdom/london/stgiles-london
+http://www.stgiles.com/wp-content/uploads/2016/02/londonA6-1024x576.jpg
+*/
+
+/* Paris */
+#paristitlebox {
+    /* http://www.hdwallpaper.nu/paris-wallpapers/ */
+    background-image: url(../images/paris/paris.jpg);
+}
+
+#lockbox {
+    /* https://www.carbonbrief.org/explainer-the-legal-form-of-the-paris-climate-agreement */
+    background-image: url(../images/paris/locks.jpg);
+}
+
+#tourismbox {
+    /* http://www.spyderonlines.com/image-html.php?pic=/images/wallpapers/eiffel-tower-wallpaper/eiffel-tower-wallpaper-20.jpg */
+    background-image: url(../images/paris/eiffeltower.jpg);
+}
+
+/* Sydney */
+#sydneytitlebox {
+    /* https://www.azamaraclubcruises.com/sydney-australia-cruises */
+    background-image: url(../images/sydney/sydney.jpg);
+}
+
+#operahousebox {
+    /* http://hdwallpaperbackgrounds.net/sydney-opera-house-wallpapers/ */
+    background-image: url(../images/sydney/operahouse.jpg);
+}
+
+#coastbox {
+    /* http://hdwallpaperbackgrounds.net/sydney-opera-house-wallpapers/ */
+    background-image: url(../images/sydney/coast.jpg);
+}
